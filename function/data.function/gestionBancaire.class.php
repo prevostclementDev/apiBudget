@@ -153,21 +153,21 @@
         }
 
         /* ADD LIVRET TO SPECIFIC ACCOUNT NUMBER */
-        public function createLivret(Int $accountNumber, String $name, Int $solde_base = 0) {
+        public function createLivret(Int $accountNumber, String $name, Float $solde_base = 0.0) {
 
             return $this->addData('livret','name,solde_base,account_banks_id','"'.$name.'"'.',"'.$solde_base.'"'.',"'.$accountNumber.'"');
 
         } 
 
         /* ADD CHANGE TO SPECIFIC LIVRET AND CATEGORIE */
-        public function createChange(String $name, Int $id_livret, Int $id_categorie, Int $montant , String $intitule , String $type_change , String $date) {
+        public function createChange(String $name, Int $id_livret, Int $id_categorie, Float $montant , String $intitule , String $type_change , String $date) {
 
             return $this->addData('base_change','name,id_livret,id_categorie,montant,intitule,type_change,date','"'.$name.'"'.',"'.$id_livret.'"'.',"'.$id_categorie.'"'.',"'.$montant.'"'.',"'.$intitule.'"'.',"'.$type_change.'"'.',"'.$date.'"');
 
         } 
 
         /* ADD MENSUALITE TO SPECIFIC LIVRET AND CATEGORIE */
-        public function createMensualite(String $name, Int $id_livret, Int $id_categorie, Int $montant , String $intitule ,Bool $actif , String $date , String $type_change) {
+        public function createMensualite(String $name, Int $id_livret, Int $id_categorie, Float $montant , String $intitule ,Bool $actif , String $date , String $type_change) {
 
             return $this->addData('mensualites','name,id_livret,id_categorie,montant,intitule,actif,date,type_change','"'.$name.'"'.',"'.$id_livret.'"'.',"'.$id_categorie.'"'.',"'.$montant.'"'.',"'.$intitule.'"'.',"'.$actif.'"'.',"'.$date.'"'.',"'.$type_change.'"');
 

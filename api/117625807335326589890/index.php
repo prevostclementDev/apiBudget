@@ -2,7 +2,7 @@
 
     require_once '../../function/data.function/gestionBancaireData.class.php';
     require_once '../../ressources/variable.php';
-    require_once '../../function/return.function.class.php';
+    require_once '../../function/return.function.class.Sphp';
 
     $return = new returnAddons();
     $parentFolder = explode( DIRECTORY_SEPARATOR , dirname(__FILE__) );
